@@ -1,5 +1,16 @@
-testing
-testWayFromTo
+"
+Test RefsHunter functionality.
+
+WARNING:  very time and memory demanding test case
+"
+Class {
+	#name : #RefsHunterTest,
+	#superclass : #TestCase,
+	#category : 'RefsHunter-Test'
+}
+
+{ #category : #testing }
+RefsHunterTest >> testWayFromTo [
 
 	| rh o1 o2 o3 o4 o5 o6 |
 	o1 := Object new.
@@ -25,3 +36,4 @@ testWayFromTo
 	
 	rh := nil.
 	Smalltalk garbageCollect.
+]
