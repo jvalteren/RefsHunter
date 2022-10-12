@@ -6,13 +6,16 @@ WARNING:  very time and memory demanding test case
 Class {
 	#name : #RefsHunterTest,
 	#superclass : #TestCase,
-	#category : 'RefsHunter-Test'
+	#category : #'RefsHunter-Test'
 }
 
 { #category : #testing }
 RefsHunterTest >> testWayFromTo [
 
 	| rh o1 o2 o3 o4 o5 o6 |
+
+	self timeLimit: 60 seconds.
+
 	o1 := Object new.
 	o2 := Object new.
 	o3 := (o1 -> o2).
